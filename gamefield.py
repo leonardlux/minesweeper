@@ -24,7 +24,7 @@ class Gamefield():
             print("Feld schon mit Bombe belegt!" + str(position))
 
 
-    def __init__(self,dimension=(20,20), bombs=40):
+    def __init__(self,dimension=(50,50), bombs=400):
         self.dimension = dimension
         self.bombs = bombs
         self.field = [[Cell() for j in range(dimension[1])] for i in range(dimension[0])]

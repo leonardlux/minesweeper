@@ -2,19 +2,28 @@
 
 
 class Cell():
-    def __init__(self):
+    def __init__(self,position):
         self.bomb = False
-        self.nachbarn = 0
+        self.nachbarn = 0 #benachbarteBomben
+        self.position = position
         self.visible = False
-        self.flagged = False
+        self.flaged = False
         self.tested = False
-        self.flaggedNachbarn = 0 
-    
+
+        #für solving
+        self.visibleNachbarn = 0
+        self.flagedNachbarn = 0
+
+
     def changeNachbarn(self,change):
         if not self.bomb:
             self.nachbarn += change
-    
-    def changeFlaggedNachbarn(self,change):
+        
+    def changeVisibleNachbarn(self,change):
         if not self.bomb:
-            self.flaggedNachbarn += change
+            self.visibleNachbarn += change
+    
+    def changeFlagedNachbarn(self,change):
+        if not self.bomb:
+            self.flagedNachbarn += change
     

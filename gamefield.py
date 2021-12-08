@@ -150,7 +150,6 @@ class Gamefield():
             if x[0]==0 or x[0]==(self.dimension[0]-1):
                 randOrdnung +=1
             if x[1]==0 or x[1]==(self.dimension[1]-1):
-                print(x)
                 randOrdnung +=1
 
             if self.field[x[0]][x[1]].visibleNachbarn + self.field[x[0]][x[1]].flagedNachbarn == maxNachbarn[randOrdnung]:

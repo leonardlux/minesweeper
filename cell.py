@@ -1,7 +1,7 @@
 
 
 
-class Cell():
+class Cell:
     def __init__(self,position=(None,None)):
         self.bomb = False
         self.value = None #benachbarteBomben
